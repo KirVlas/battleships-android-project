@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="14dp"
+              android:orientation="vertical">
+    <GridLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:rowCount="1" android:columnCount="6"
+            android:visibility="invisible" android:id="@+id/grdSpinners">
+
+        <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerShips" android:layout_column="0" android:layout_row="0"
+                />
+        <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerDirections" android:layout_column="3" android:layout_row="0"/>
+        <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerCols" android:layout_column="2" android:layout_row="0"/>
+        <Spinner
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerRows" android:layout_row="0" android:layout_column="1"
+                />
+    </GridLayout>
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Ship"
+            android:id="@+id/btnAddShip" android:onClick="addShipButtonClicked" android:visibility="invisible"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtGameID" android:layout_gravity="center_horizontal"
+            android:text="Please wait..."/>
+    <view android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          class="com.kirvla.Battleships.GameView"
+          android:id="@+id/boardView"/>
+</LinearLayout>
